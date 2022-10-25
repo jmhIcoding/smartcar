@@ -1,0 +1,105 @@
+<html>
+<!--调整摄像头方向-->
+		<div class="change_camera_direction">
+			<div class="camera_title">摄像头方向控制</div>
+			<div class="direction_content">
+				<div class="direction_div top_direction">
+					<button onmousedown="go_up()" onmouseup="go_stop()" onclick="go_stop()">上</button>
+				</div>
+				<div class="direction_div left_direction">
+					<button onmousedown="go_left()" onmouseup="go_stop()" onclick="go_stop()">左</button>
+				</div>
+				<div class="direction_div bottom_direction">
+					<button onmousedown="go_down()" onmouseup="go_stop()" onclick="go_stop()" >下</button>
+				</div>
+				<div class="direction_div right_direction">
+					<button onmousedown="go_right()" onmouseup="go_stop()" onclick="go_stop()">右</button>
+				</div>
+			</div>
+		</div>
+<script>
+
+    function go_down(){
+        url="http://49.232.172.74:9020/go_down";
+        var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
+        httpRequest.open('GET', url, true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
+        httpRequest.send();//第三步：发送请求  将请求参数写在URL中
+    }
+
+    function go_up(){
+        url="http://49.232.172.74:9020/go_up";
+        var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
+        httpRequest.open('GET', url, true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
+        httpRequest.send();//第三步：发送请求  将请求参数写在URL中
+    }
+    function go_left(){
+        url="http://49.232.172.74:9020/go_left";
+        var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
+        httpRequest.open('GET', url, true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
+        httpRequest.send();//第三步：发送请求  将请求参数写在URL中
+    }
+    function go_right(){
+        url="http://49.232.172.74:9020/go_right";
+        var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
+        httpRequest.open('GET', url, true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
+        httpRequest.send();//第三步：发送请求  将请求参数写在URL中
+    }
+    function go_stop(){
+        url="http://49.232.172.74:9020/go_stop";
+        var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
+        httpRequest.open('GET', url, true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
+        httpRequest.send();//第三步：发送请求  将请求参数写在URL中
+    }
+</script>
+
+
+<style>
+/*摄像头方向控制*/
+.change_camera_direction{
+	text-align: center;
+	position: absolute;
+	top: 0%;
+	width: 200px;
+	height: 200px;
+}
+.change_camera_direction .camera_title{
+	color: white;
+	font-size: 15px;
+	margin: 5% auto;
+}
+.direction_content{
+	 width: 100%;
+	 height: 70%;
+	 position: relative;
+}
+.direction_div{
+	position:relative;
+	width: 30px;
+	height: 30px;
+}
+.direction_div img{
+	width: 100%;
+	height:  100%;
+}
+/*left*/
+.left_direction {
+	top: 5%;
+	left: 20%;
+}
+/*bottom*/
+.bottom_direction{
+	top:5%;
+	left: 40%;
+}
+/*right*/
+.right_direction{
+	top: -39%;
+	left: 61%;
+}
+/*top*/
+.top_direction{
+	top: 2%;
+	left: 40%;
+}
+</style>
+</html>
